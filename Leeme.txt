@@ -1,0 +1,10 @@
+realizado por: Josber Martinez y Angelo Muñoz
+pasos:
+
+vscode:
+==>instalar extension rest client
+
+terminal bash:
+==>npm run start
+
+ir a requests.http y dar Send Request a la peticion que se quiera utilizar

@@ -1,0 +1,62 @@
+//primero inicia el servidor con npm run start en la terminal bash
+//teniendo la extension rest client instalada en vscode continuar click en Send Request para cada peticion
+###
+//crear usuarios y guardarlos en la base de datos reemplazar por los datos requeridos a guardar
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"Jose Antonio",
+    "email":"jandotnio@example.com",
+    "password":"jjkk23876",
+    "registerdate":"12/18/2006",
+    "friends":96,
+    "publications":{
+        "title":"Tierra",
+        "reactions":500,
+        "comments":320,
+        "shares":100
+    },
+    "dataperfil":{
+        "ubication":"Panama",
+        "gender":"Masculino"
+    }
+}
+
+###
+//obtener todos los usuarios de la base de datos
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+//despues del /users/"colocar id del usuario a buscar"
+GET http://localhost:9000/api/users/665cc51b772e464bd42c300b HTTP/1.1
+
+
+
+
+###
+//despues del /users/"colocar id del usuario a buscar y actualizar sus datos abajo"
+PUT http://localhost:9000/api/users/665cc5f1eb4a6c9a36546388 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"Jose Lugo",
+    "email":"jl2001910@example.com",
+    "password":"123123876",
+    "registerdate":"12/18/2016",
+    "friends":962,
+    "publications":{
+        "title":"el mundo",
+        "reactions":50,
+        "comments":30,
+        "shares":10
+    },
+    "dataperfil":{
+        "ubication":"Paraguana",
+        "gender":"Masculino"
+    }
+}
+
+###
+//colocar id despues de "users/" para eliminar a usuario
+DELETE http://localhost:9000/api/users/665e1a3754a7e63f34d0e00a HTTP/1.1
